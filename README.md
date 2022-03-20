@@ -6,9 +6,11 @@ This project aims to analyze stocks for the chosen year in the excel workbook us
 ## Results
 ### Original Code 
 The original VBA code uses nested loops to examine the rows of data within each year of the stocks (2017 & 2018). This means the inner loop runs many times inside the outer loop with each iteration of the outer loop restarting the inner loop. In this coding design, the outer loop is not available to run again until the inner loop finishes all the steps. This results in a longer run time for the VBA script to complete and populate the results worksheet, “All Stocks Analysis.”  In the outer loop, the stock tickers are set to an index that the outer loop runs through. Next, the inner loop will add data matching the ticker that the outer loop is currently focused on. Continuing the conditions of the inner loop, a cell value not matching the ticker will signal for the outer loop to move to the next ticker. The process is repeated until all stock tickers are read through. By refactoring, the efficiency of the code can be markedly improved. 
+
 <img src="https://github.com/courtneysims/stock-analysis/blob/471082be39c85ee62872b2736d17114f1ef7c82e/Resources/VBA_original_code_loops.png" width="80%">
  
 The original code ran the dataset for the years 2017 and 2018 in 1.80 seconds and 1.86 seconds respectively. 
+
   <img src="https://github.com/courtneysims/stock-analysis/blob/471082be39c85ee62872b2736d17114f1ef7c82e/Resources/VBA_original_2017.png" width="50%"> 
   <img src="https://github.com/courtneysims/stock-analysis/blob/471082be39c85ee62872b2736d17114f1ef7c82e/Resources/VBA_original_2018.png" width="50%">
   
